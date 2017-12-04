@@ -1,28 +1,60 @@
+html, body {
+  background-color: #008901; 
+  color: lightgreen;
+  margin: 10px;
+  font-family: system-ui, sans-serif;
+}
+
 .App {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: .2em 2fr 4fr;
+  grid-row-gap: 3em;
+  grid-template-areas: 
+  "timer timer timer"
+  "deck . stack"
+  "pile pile pile"
+}
+
+
+.timer {
   text-align: center;
+  font-size: 1em;
+  grid-area: timer;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.deck {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  grid-area: deck;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.stacks {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  grid-area: stack;
+  /* background-color: red; */
 }
 
-.App-title {
-  font-size: 1.5em;
+.piles {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; 
+  grid-area: pile;
+  /* background-color: blue; */
 }
 
-.App-intro {
-  font-size: large;
-}
+.timer {
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

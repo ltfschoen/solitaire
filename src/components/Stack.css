@@ -1,0 +1,10 @@
+.stack {
+	z-index: 1;
+	position: relative;
+	top: 0px;
+	border: 1px solid lightgreen;
+	border-radius: 5px;
+	min-width: 100px;
+	min-height: 140px;
+	/* border: 10px solid red; */
+}
